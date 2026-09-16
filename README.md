@@ -1,41 +1,96 @@
 # Filmpire
 
-![App Screenshot](src/assets/images/Filmpire.png)
+Filmpire is a React movie discovery app powered by the TMDB API. It helps users browse popular, top-rated, and upcoming movies, search by title, filter by genre, view movie and actor details, and manage favorites or watchlists after signing in with TMDB.
 
-Filmpire combines the desire to unleash powerful creativity with the industry's most advanced JavaScript tools including React.js, Redux, Material UI and more.
+## Features
 
-This application includes user authentication, dark mode, sort movie on the basis of categories or genres, viewing movie and actor details, adding a movie to favorites or watchlist and many more functionalities. 
+- Browse popular, top-rated, and upcoming movies
+- Search movies by title
+- Filter movies by genre
+- View movie details, ratings, trailers, cast, and recommendations
+- View actor biographies and related movies
+- Sign in with TMDB authentication
+- Add movies to favorites or watchlist
+- View saved movies on the profile page
+- Switch between light and dark mode
+- Responsive layout for desktop and mobile
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- React
+- Redux Toolkit and RTK Query
+- React Router
+- Material UI
+- Axios
+- TMDB API
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Clone the project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone https://github.com/your-username/filmpire.git
+cd filmpire
+```
 
-### `npm test`
+### 2. Install dependencies
 
-Launches the test runner in the interactive watch mode.
+```bash
+npm install
+```
 
-### `npm run build`
+### 3. Add environment variables
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create a `.env` file in the project root:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```env
+REACT_APP_TMDB_KEY=your_tmdb_api_key
+ESLINT_NO_DEV_ERRORS=true
+```
 
-### `npm run eject`
+You can get a TMDB API key from your TMDB account settings.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Start the app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Open `http://localhost:3000` in your browser.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Scripts
+
+```bash
+npm start
+```
+
+Runs the app in development mode.
+
+```bash
+npm run build
+```
+
+Builds the app for production.
+
+```bash
+npm test
+```
+
+Runs the test watcher.
+
+## Project Structure
+
+```text
+src/
+  app/          Redux store setup
+  assets/       Genre icons and static assets
+  components/   App pages and reusable UI components
+  features/     Redux slices
+  services/     TMDB API service
+  utils/        API helpers and theme utilities
+```
+
+## Notes
+
+- TMDB login is required to use favorites and watchlist features.
+- Movie data, posters, trailers, cast, and recommendations come from TMDB.
